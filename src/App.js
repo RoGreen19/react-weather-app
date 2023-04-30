@@ -104,6 +104,8 @@ export default function App() {
           <a
             href="https://github.com/RoGreen19/Weather-App-Final-Project"
             target="_blank"
+            without
+            rel="noreferrer"
             style={{ color: "#F9A90F" }}
           >
             Open-source code
