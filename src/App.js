@@ -8,7 +8,7 @@ function App() {
       <div className="card text-bg-dark">
         <img
           src="scr/20210118-barnimages-2.jpg"
-          classNameName="card-img"
+          className="card-img"
           alt="Wearher"
         />
         <div className="card-img-overlay">
