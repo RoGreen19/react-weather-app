@@ -16,7 +16,7 @@ root.render(
     <p className="code-link">
       {" "}
       <a
-        href="https://github.com/RoGreen19/Weather-App-Final-Project"
+        href="https://enchanting-cannoli-14d1cb.netlify.app/"
         target="_blank"
         rel="noreferrer"
       >
