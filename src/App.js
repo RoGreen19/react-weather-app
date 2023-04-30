@@ -1,116 +1,67 @@
-import "./App.css";
+import React from "react";
+import "./Weather.css";
 
-export default function App() {
+export default function Weather() {
+  let weatherData = {
+    city: "New York",
+    temperature: 19,
+    date: "Tuesday 10:00",
+    description: "Cloudy",
+    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+    humidity: 80,
+    wind: 10,
+  };
+
   return (
-    <div className="App">
-      <div className="container">
-        <div className="card text-bg-dark">
-          <img
-            src="scr/20210118-barnimages-2.jpg"
-            className="card-img"
-            alt="Wearher"
-          />
-          <div className="card-img-overlay">
-            <h2 id="city-name">Kyiv</h2>
-            <h4 id="current-date">05/12</h4>
-            <h5 id="current-time">12:01</h5>
-            <form id="city-input">
-              <input
-                id="search-new-city"
-                type="search"
-                placeholder="Search city"
-                autoComplete="off"
-              />
-              <button className="search-button">🔍</button>
-            </form>
-            <img className="weather-img-current" src="200-232.png" />
-            <h1 id="day-temperasture">-12°</h1>
-            <h6 id="current-forecast">Cloudy</h6>
-            <h6 id="humidity">Humidity: 10%</h6>
-            <h6 id="wind">Wind: 13 mph</h6>
-            <div className="container text-center" id="forecast">
-              <div className="row">
-                <div className="col">
-                  <p className="weekdate-one-name">Mon</p>
-                  <br />
-                  <img
-                    src="http://openweathermap.org/img/wn/10d@2x.png"
-                    className="week-weather-icon"
-                  />
-                  <br />
-                  <p className="weekdate-one-temperature">
-                    <span className="max-temperature">8°</span>
-                    <span className="min-temperature">/-12°</span>
-                  </p>
-                </div>
-                <div className="col">
-                  <p className="weekdate-two-name">Tues</p>
-                  <br />
-                  <img
-                    src="http://openweathermap.org/img/wn/13d@2x.png"
-                    className="week-weather-icon"
-                  />
-                  <br />
-                  <p className="weekdate-two-temperature">
-                    <span className="max-temperature">8°</span>
-                    <span className="min-temperature">/-12°</span>
-                  </p>
-                </div>
-                <div className="col">
-                  <p className="weekdate-three-name">Wed</p>
-                  <br />
-                  <img
-                    src="http://openweathermap.org/img/wn/10d@2x.png"
-                    className="week-weather-icon"
-                  />
-                  <br />
-                  <p className="weekdate-three-temperature">
-                    <span className="max-temperature">8°</span>
-                    <span className="min-temperature">/-12°</span>
-                  </p>
-                </div>
-                <div className="col">
-                  <p className="weekdate-four-name">Thurs</p>
-                  <br />
-                  <img
-                    src="http://openweathermap.org/img/wn/09d@2x.png"
-                    className="week-weather-icon"
-                  />
-                  <br />
-                  <p className="weekdate-four-temperature">
-                    <span className="max-temperature">8°</span>
-                    <span className="min-temperature">/-12°</span>
-                  </p>
-                </div>
-                <div className="col">
-                  <p className="weekdate-five-name">Fri</p>
-                  <br />
-                  <img
-                    src="http://openweathermap.org/img/wn/50d@2x.png"
-                    className="week-weather-icon"
-                  />
-                  <br />
-                  <p className="weekdate-five-temperature">
-                    <span className="max-temperature">8°</span>
-                    <span className="min-temperature">/-12°</span>
-                  </p>
-                </div>
-              </div>
+    <div className="Weather">
+      <form className="mb-3">
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Type a city.."
+              className="form-control"
+              autoComplete="off"
+            />
+          </div>
+          <div className="col-3">
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-primary w-100"
+            />
+          </div>
+        </div>
+      </form>
+      <div className="overview">
+        <h1>{weatherData.city}</h1>
+        <ul>
+          <li>Last updated: {weatherData.date}</li>
+          <li>{weatherData.description}</li>
+        </ul>
+      </div>
+      <div className="row">
+        <div className="col-6">
+          <div className="clearfix weather-temperature">
+            <img
+              src={weatherData.imgUrl}
+              alt={weatherData.description}
+              className="float-left"
+            />
+            <div className="float-left">
+              <strong>{weatherData.temperature}</strong>
+              <span className="units">
+                <a href="/">°C</a> | <a href="/">°F</a>
+              </span>
             </div>
           </div>
         </div>
-        <p className="code-link">
-          {" "}
-          <a
-            href="https://github.com/RoGreen19/Weather-App-Final-Project"
-            target="_blank"
-            rel="noreferrer"
-            style={{ color: "#F9A90F" }}
-          >
-            Open-source code
-          </a>
-          by Sofiia Telychko{" "}
-        </p>
+        <div className="col-6">
+          <ul>
+            <li>Humidity: {weatherData.humidity}%</li>
+            <li>Wind: {weatherData.wind} km/h</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

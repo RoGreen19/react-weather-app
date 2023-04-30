@@ -1,149 +1,36 @@
+.App {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
 body {
-  background-image: linear-gradient(
-    to top,
-    #076585,
-    #6387a5,
-    #9dacc3,
-    #d1d4e1,
-    #ffffff
-  );
+  font-family: arial, sans-serif;
 }
 
-.container {
-  display: block;
-  margin: 77px;
+h1 {
+  color: #878787;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
 }
 
-.text-bg-dark {
-  margin: 0 auto;
-  width: 400px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 98%;
-  font-family: "Josefin Sans", sans-serif;
-  opacity: 88%;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-.card-img-overlay {
-  color: #000;
-  margin: 10px;
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: rgb(135, 135, 135);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
 }
 
-#city-name {
-  margin: 0 auto;
-  display: block;
-  text-align: left;
-  font-size: 40px;
-  position: relative;
-}
-
-#current-date {
-  margin: 0 auto;
-  display: block;
-  font-size: 20px;
-  text-align: left;
-}
-
-#current-time {
-  margin: 0 auto;
-  font-size: 15px;
-}
-
-#search-new-city {
-  position: relative;
-  top: -148px;
-  left: 209px;
-  width: 125px;
-  height: 22px;
-  font-size: 14px;
-}
-
-.search-button {
-  position: relative;
-  top: -148px;
-  left: 200px;
-  width: 30px;
-  height: 22px;
-  border: none;
-  background: none;
-}
-
-.weather-img-current {
-  position: absolute;
-  z-index: 0;
-  width: 263px;
-  top: 87px;
-  right: 31px;
-  filter: drop-shadow(2px 2px 10px rgb(128, 123, 123));
-}
-#day-temperasture {
-  font-size: 112px;
-  text-align: center;
-  margin: 13px 0px 51px 5px;
-  position: relative;
-  left: 66px;
-  top: 48px;
-  text-shadow: rgb(0 0 0 / 76%) 0px 5px 15px;
-}
-
-#current-forecast {
-  font-style: italic;
-  margin: 2px 0px 20px;
-  font-size: 21px;
-}
-
-#humidity,
-#wind {
-  font-weight: bold;
-  font-size: 22px;
-}
-#wind {
-  margin-bottom: 15px;
-}
-
-.text-center {
-  margin: 0 auto;
-}
-
-.col {
-  color: #fff;
-  border-radius: 59px;
-  background: #000000d4;
-  box-shadow: rgb(0 0 0 / 25%) 0px 3px 3px 0px;
-  font-size: 12px;
-  line-height: 0.5;
-  padding: 21px 0px;
-  margin: 2px;
-}
-
-.week-weather-icon {
-  width: 31px;
-  filter: drop-shadow(0px 0px 2px #fff);
-  margin: 5px;
-}
-
-.weekdate-one-name,
-.weekdate-one-temperature,
-.weekdate-two-name,
-.weekdate-two-temperature,
-.weekdate-three-name,
-.weekdate-three-temperature,
-.weekdate-four-name,
-.weekdate-four-temperature,
-.weekdate-five-name,
-.weekdate-five-temperature {
-  margin: 7px 2px;
-}
-
-.max-temperature {
-  font-weight: bold;
-}
-
-.code-link {
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
+li:first-letter {
+  text-transform: capitalize;
 }
