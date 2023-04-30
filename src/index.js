@@ -13,5 +13,16 @@ root.render(
     <div className="App">
       <Weather />
     </div>
+    <p className="code-link">
+      {" "}
+      <a
+        href="https://github.com/RoGreen19/Weather-App-Final-Project"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open-source code
+      </a>
+      by Sofiia Telychko{" "}
+    </p>
   </StrictMode>
 );
